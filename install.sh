@@ -15,8 +15,10 @@ read -p "Admin Username?" admin_name
 echo -n "Admin Password?"
 read -s admin_password
 read -p "Admin Email?" admin_email
-# wp core config --dbhost=$dbhost --dbname=$dbname --dbuser=$dbuser --dbpass=$dbpass
-echo "--dbhost=$dbhost --dbname=$dbname --dbuser=$dbuser --dbpass=$dbpass"
-# chmod 644 wp-config.php
-# wp core install --url=$url --title=$title --admin_name=$admin_name --admin_password=$admin_password --admin_email=$admin_email
-echo "--url=$url --title=$title --admin_name=$admin_name --admin_password=$admin_password --admin_email=$admin_email"
+wp core config --dbhost=$dbhost --dbname=$dbname --dbuser=$dbuser --dbpass=$dbpass
+chmod 644 wp-config.php
+wp core install --url=$url --title=$title --admin_name=$admin_name --admin_password=$admin_password --admin_email=$admin_email
+cd wp-content
+mkdir uploads
+chgrp web uploads/
+chmod 775 uploads/
