@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "Here we go!"
 read -p "Directory name? " blog_dir
-mkdir blog_dir
-cd blog_dir
+mkdir $blog_dir
+cd $blog_dir
 # wp core download
 read -p "DB Host?" dbhost
 read -p "DB Name?" dbname
