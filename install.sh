@@ -14,7 +14,7 @@ read -p "Title?" title
 read -p "Admin Username?" admin_name
 echo -n "Admin Password?"
 read -s admin_password
-read -p "Admin Username?" admin_email
+read -p "Admin Email?" admin_email
 # wp core config --dbhost=$dbhost --dbname=$dbname --dbuser=$dbuser --dbpass=$dbpass
 echo "--dbhost=$dbhost --dbname=$dbname --dbuser=$dbuser --dbpass=$dbpass"
 # chmod 644 wp-config.php
